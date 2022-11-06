@@ -1,3 +1,4 @@
+from typing import List
 from browser import DOMEvent, window
 from pyfyre import Style
 from pyfyre.nodes import *
@@ -13,7 +14,7 @@ class Header(Widget):
             styles=[Style(z_index="1000")],
         )
 
-    def build(self) -> list[Node]:
+    def build(self) -> List[Node]:
         def go_to_repo(event: DOMEvent) -> None:
             window.location.href = "https://github.com/pyfyre/pyfyre"
 
@@ -102,7 +103,7 @@ class CallToAction(Widget):
             }
         )
 
-    def build(self) -> list[Node]:
+    def build(self) -> List[Node]:
         return [
             Element(
                 "p",

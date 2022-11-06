@@ -1,3 +1,4 @@
+from typing import List
 from pyfyre.nodes import *
 from components import CallToAction
 
@@ -28,7 +29,7 @@ class Feature(Widget):
         self.index = index
         super().__init__()
 
-    def build(self) -> list[Node]:
+    def build(self) -> List[Node]:
         i = self.index
         l0 = "items-start" if i % 2 == 0 else "items-end"
         l1 = "md:flex-row-reverse" if i % 2 == 0 else "md:flex-row"
@@ -96,7 +97,7 @@ class Feature(Widget):
 
 
 class Home(Widget):
-    def build(self) -> list[Node]:
+    def build(self) -> List[Node]:
         return [
             Element(
                 "div",

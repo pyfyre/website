@@ -1,5 +1,5 @@
 import sys
-from typing import Callable
+from typing import Callable, List
 from browser import window, document
 from pyfyre import Style
 from pyfyre.nodes import *
@@ -39,7 +39,7 @@ class Playground(Widget):
             attrs={"class": "flex flex-row w-full h-screen"},
         )
 
-    def build(self) -> list[Node]:
+    def build(self) -> List[Node]:
         return [
             Element(
                 "div",
