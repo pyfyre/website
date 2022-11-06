@@ -1,9 +1,12 @@
 import sys
 from typing import Callable, List
 from browser import window, document
+import pyfyre
 from pyfyre import Style
 from pyfyre.nodes import *
 from pyfyre.presets import DebugError
+
+pyfyre.PRODUCTION = False
 
 
 def render_playground(node_builder: Callable[[], Node]) -> None:
@@ -56,13 +59,11 @@ class Playground(Widget):
                 lambda: [
                     Element(
                         "div",
-                        attrs={
-                            "class": "p-2 h-full w-full",
-                            "id": "output-id",
-                        },
+                        styles=[Style(all="initial")],
+                        attrs={"id": "output-id"},
                     ),
                 ],
                 styles=[Style(overflow="scroll", width="50%")],
-                attrs={"class": "border-l-4"},
+                attrs={"class": "border-l-4 p-2 h-full w-full"},
             ),
         ]
