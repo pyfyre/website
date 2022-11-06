@@ -16,18 +16,29 @@ from typing import Dict, List, Any
 #
 # Example:
 # {
-# 	"/": {
-# 		"title": "A PyFyre App",
-# 		"icon": "/favicon.ico",
-# 		"head": ['<link rel="stylesheet" href="/style.css" />']
-# 	}
+#   "/": {
+#       "title": "A PyFyre App",
+#       "icon": "/favicon.ico",
+#       "head": ['<link rel="stylesheet" href="/style.css" />']
+#   }
 # }
 ROUTES: Dict[str, Dict[str, Any]] = {
     "/": {
         "title": "A PyFyre App",
         "icon": "/favicon.ico",
         "head": ['<link rel="stylesheet" href="/style.css" />'],
-    }
+    },
+    "/playground": {
+        "title": "A PyFyre App | Playground",
+        "icon": "/favicon_code.ico",
+        "head": [
+            '<link rel="stylesheet" href="/style.css" />',
+            '<link rel="stylesheet" href="/codemirror.css" />',
+            '<script src="/codemirror.js"></script>',
+            '<script src="/codeeditor.js"></script>',
+            '<script src="/python.js"></script>',
+        ],
+    },
 }
 
 # When building your app, PyFyre makes your CPython packages installed by pip
@@ -39,8 +50,8 @@ ROUTES: Dict[str, Dict[str, Any]] = {
 #
 # Example:
 # [
-# 	"text_generator",
-# 	"random_string",
-# 	"url64"
+#   "text_generator",
+#   "random_string",
+#   "url64"
 # ]
 PYTHON_DEPENDENCIES: List[str] = []

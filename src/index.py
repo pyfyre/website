@@ -1,24 +1,23 @@
 from pyfyre import render
 from pyfyre.nodes import *
+from components import Header
+from home import Home
+from playground import Playground
 
 
-class App(Widget):
+class HomePage(Widget):
     def build(self) -> list[Node]:
-        return [
-            Element("h1", lambda: [Text("Welcome to PyFyre 🐍🔥")]),
-            Element(
-                "p",
-                lambda: [
-                    Text("Learn PyFyre by reading the "),
-                    Link(
-                        "https://pyfyre.netlify.app/", lambda: [Text("documentation")]
-                    ),
-                    Text(". It is also advisable to learn "),
-                    Link("https://www.brython.info/", lambda: [Text("Brython")]),
-                    Text(" alongside PyFyre as it is built on top of Brython."),
-                ],
-            ),
-        ]
+        return [Header(), Home()]
 
 
-render({"/": lambda: App()})
+class PlaygroundPage(Widget):
+    def build(self) -> list[Node]:
+        return [Header(), Playground()]
+
+
+render(
+    {
+        "/": lambda: HomePage(),
+        "/playground": lambda: PlaygroundPage(),
+    }
+)
