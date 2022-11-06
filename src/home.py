@@ -172,6 +172,22 @@ class Home(Widget):
                 attrs={"class": "flex flex-col w-full h-5/6"},
             ),
             Element("div", lambda: [Feature(i) for i, _ in enumerate(_FEATURES)]),
+            Element(
+                "div",
+                lambda: [
+                    Element(
+                        "iframe",
+                        attrs={
+                            "src": "https://github.com/sponsors/pyfyre/card",
+                            "title": "Sponsor pyfyre",
+                            "height": "225",
+                            "width": "600",
+                            "style": "border: 0;",
+                        },
+                    )
+                ],
+                attrs={"class": "flex items-center justify-center"},
+            ),
             CallToAction(
                 "Brython",
                 "PyFyre is powered by Brython, a Python 3 implementation for client-side web programming.",

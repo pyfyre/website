@@ -67,6 +67,16 @@ class Header(Widget):
                                 ],
                                 attrs={"class": "invisible flex space-x-5 lg:visible"},
                             ),
+                            Element(
+                                "iframe",
+                                attrs={
+                                    "src": "https://github.com/sponsors/pyfyre/button",
+                                    "title": "Sponsor pyfyre",
+                                    "height": "35",
+                                    "width": "116",
+                                    "style": "border: 0;",
+                                },
+                            ),
                             Button(
                                 go_to_repo,
                                 lambda: [
