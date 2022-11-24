@@ -47,6 +47,16 @@ class Header(Widget):
                                 "div",
                                 lambda: [
                                     Link(
+                                        "https://discord.com/invite/YzEDuqhgZJ",
+                                        lambda: [Text("Discord")],
+                                        attrs={
+                                            "target": "_blank",
+                                            "class": "block py-2 pr-4 pl-3 "
+                                            "text-base text-black md:bg-transparent "
+                                            "md:text-black md:p-0 cursor-pointer",
+                                        },
+                                    ),
+                                    Link(
                                         "https://pyfyre-docs.netlify.app/",
                                         lambda: [Text("Documentation")],
                                         attrs={
