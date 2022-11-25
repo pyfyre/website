@@ -31,7 +31,7 @@ window.addEventListener("pyfyreload", () => {
     );
     CodeMirrorAPI.codeMirror.setSize(width = "100%", height = "100%");
     CodeMirrorAPI.codeMirror.on("change", CodeListen.broadcast);
-    CodeMirrorAPI.codeMirror.setValue(`from pyfyre.nodes import *
+    CodeMirrorAPI.codeMirror.setValue(`from pyfyre.nodes import Node, Widget, Element, Text
 
 
 class App(Widget):
