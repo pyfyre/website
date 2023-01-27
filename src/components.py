@@ -84,7 +84,7 @@ class Header(Widget):
                                     "title": "Sponsor pyfyre",
                                     "height": "35",
                                     "width": "116",
-                                    "style": "border: 0;",
+                                    "style": "border: 0; background-color: white;",
                                 },
                             ),
                             Button(

@@ -33,11 +33,15 @@ window.addEventListener("pyfyreload", () => {
     CodeMirrorAPI.codeMirror.on("change", CodeListen.broadcast);
     CodeMirrorAPI.codeMirror.setValue(`from pyfyre.nodes import Node, Widget, Element, Text
 
-
 class App(Widget):
     def build(self) -> list[Node]:
-        return [Element("p", lambda: [Text("Hello, World!")])]
-
+        return [
+            Element("p",
+                lambda: [
+                    Text("Hello, World!")
+                ]
+            )
+        ]
 
 # We use this here instead of \`render\`.
 render_playground(lambda: App())

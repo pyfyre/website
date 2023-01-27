@@ -5,16 +5,13 @@ from components import Header
 from home import Home
 from playground import Playground
 
-
 class HomePage(Widget):
     def build(self) -> List[Node]:
         return [Header(), Home()]
 
-
 class PlaygroundPage(Widget):
     def build(self) -> List[Node]:
         return [Header(), Playground()]
-
 
 render(
     {
